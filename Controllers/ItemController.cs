@@ -29,12 +29,12 @@ namespace ElectronicsStore.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Create(ItemViewModel itemView, SellerViewModel sellerView,Items item )
+        public async Task<IActionResult> Create(ItemViewModel itemView, SellerViewModel sellerView)
         {
 
 
-            string UninqeFileName = UploadedFile(itemView);
-            itemView.ImageUrl = UninqeFileName;
+            //string UninqeFileName = UploadedFile(itemView);
+            //itemView.ImageUrl = UninqeFileName;
 
 
        
