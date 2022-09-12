@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\ElectronicsStore\\ElectronicsStore.csproj": {}
+    "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\ElectronicsStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\ElectronicsStore\\ElectronicsStore.csproj": {
+    "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\ElectronicsStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\ElectronicsStore\\ElectronicsStore.csproj",
+        "projectUniqueName": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\ElectronicsStore.csproj",
         "projectName": "ElectronicsStore",
-        "projectPath": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\ElectronicsStore\\ElectronicsStore.csproj",
+        "projectPath": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\ElectronicsStore.csproj",
         "packagesPath": "C:\\Users\\Gedi G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\ElectronicsStore\\obj\\",
+        "outputPath": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

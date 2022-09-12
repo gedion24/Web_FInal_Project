@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8j4+IatHzFJkhBUJZgErdbsOgY13YCAMcpmTZQiQkgKmkAoUijpyMJi21CpeOdWos4A5Irai6xZQ1bKDiUWwIQ==",
+  "dgSpecHash": "kjPw1W8b9jLzIBaO+KHGSyV0J9/blZDs/iYwb6DdffxTUdd5l3KrR103dAQeVP8UIHnsf84TVEP6BsqNpdxN2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\ElectronicsStore\\ElectronicsStore.csproj",
+  "projectFilePath": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\ElectronicsStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gedi G\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Gedi G\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
