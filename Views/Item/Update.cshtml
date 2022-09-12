@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model ElectronicsStore.Models.UpdateItemModel
+
+<h2>Update Product</h2>
+<form action="/Item/Update" method="post">
+    <div class="form-row">
+        
+        <div class="form-group col-md-6">
+            <label for="ItemId">Item Id</label>
+            <input type="text" class="form-control" id="ItemId" name="ItemId" placeholder="ItemId" asp-for="ItemId"  readonly>
+        </div>
+    </div>
+    <div class="form-row">
+     <div class="form-group col-md-6">
+            <label for="ItemImage">ItemImage</label>
+            <input type="text" class="form-control" id="ItemImage" name="ItemImage" placeholder="ItemImage"asp-for="ItemImage">
+        </div>
+       
+    </div>
+     <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="ItemStatus">ItemStatus</label>
+            <input type="text" class="form-control" id="ItemStatus" name="ItemStatus" placeholder="ItemStatus" asp-for="ItemStatus">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="ItemDescription">ItemDescription</label>
+            <input type="text" class="form-control" id="ItemDescription" name="ItemDescription" placeholder="ItemDescription"asp-for="ItemDescription">
+        </div>
+    </div>
+     <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Condition">Condition</label>
+            <input type="text" class="form-control" id="Condition" name="Condition" placeholder="Condition" asp-for="Condition">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Amount">Amount</label>
+            <input type="text" class="form-control" id="Amount" name="Amount" placeholder="Amount"asp-for="Amount">
+        </div>
+          <div class="form-group col-md-6">
+            <label for="PricePerItem">PricePerItem</label>
+            <input type="text" class="form-control" id="PricePerItem" name="PricePerItem" placeholder="PricePerItem"asp-for="PricePerItem">
+        </div>
+       <div class="form-group col-md-6">
+            <label for="brand">brand</label>
+            <input type="text" class="form-control" id="brand" name="brand" placeholder="brand"asp-for="brand">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <button type="submit" class="btn btn-outline-danger" asp-action="Delete"
+                                                 asp-controller="item" >Delete</button>
+    <a class="btn btn-danger" href="/product/index">Cancel</a>
+</form>
