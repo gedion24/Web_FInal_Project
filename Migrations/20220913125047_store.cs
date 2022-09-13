@@ -183,7 +183,9 @@ namespace ElectronicsStore.Migrations
                         column: x => x.Id,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Cascade,
+                        onUpdate: ReferentialAction.Cascade
+                        );
                 });
 
             migrationBuilder.CreateIndex(
