@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using ElectronicsStore.Areas.Identity.Data;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -16,7 +17,10 @@ namespace ElectronicsStore.Models
 
         // The '?' means the value set on these variables is `NULL`
         // [Required] means the value set on these variables is `NOT NULL`
-
+        [Required]
+        public string Id { get; set; }
+        [ForeignKey("Id")]
+        public virtual ElectronicsStoreUser electronicsStoresUser { get; set; }
 
         [Required]
         [DisplayName("ItemImage")]

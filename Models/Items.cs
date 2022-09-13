@@ -2,6 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace ElectronicsStore.Models;
+
+using ElectronicsStore.Areas.Identity.Data;
 using System.Web;
 
 public class Items
@@ -20,6 +22,11 @@ public class Items
     //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     //[Key]
     public Guid SellerId { get; set; }
+
+    [Required]
+    public string Id { get; set; }
+    [ForeignKey("Id")]
+    public virtual ElectronicsStoreUser electronicsStoresUser { get; set; }
 
 
     // The '?' means the value set on these variables is `NULL`

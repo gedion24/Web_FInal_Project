@@ -1,6 +1,7 @@
 ﻿using ElectronicsStore.Areas.Identity.Data;
 using ElectronicsStore.Models;
 using ElectronicsStore.Models.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,7 @@ namespace ElectronicsStore.Controllers
 {
     public class ItemController : Controller
     {
+        
         public readonly ElectronicsStoreDataContext ecd;
         public readonly IWebHostEnvironment webHostEnvironment;
         public ItemController(ElectronicsStoreDataContext EDC, IWebHostEnvironment IWE)
@@ -29,7 +31,7 @@ namespace ElectronicsStore.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Create(ItemViewModel itemView, SellerViewModel sellerView )
+        public async Task<IActionResult> Create(ItemViewModel itemView, SellerViewModel sellerView, ElectronicsStoreUser electronicsStore )
         {
 
 
@@ -49,14 +51,18 @@ namespace ElectronicsStore.Controllers
                     await itemView.ImageFile.CopyToAsync(filestream);
                 }
 
-         
+            
+
+
 
             var item = new Items()
-            { 
-               
-              //  ItemId = long.newLong(),
-                   ItemId= Guid.NewGuid(),
-                   SellerId = Guid.NewGuid(),
+            {
+
+                //  ItemId = long.newLong(),
+                ItemId = Guid.NewGuid(),
+                SellerId = Guid.NewGuid(),
+                
+                  
                 
                 ItemImage = itemView.ItemImage,
                 ItemStatus = itemView.ItemStatus,
@@ -75,9 +81,21 @@ namespace ElectronicsStore.Controllers
 
         [HttpGet]
 
-        public async Task<IActionResult> Update(Guid Id)
+        public async Task<IActionResult> Update(Guid Id, ItemViewModel itemView)
         {
             var result = await ecd.item.FirstOrDefaultAsync(x => x.ItemId== Id);
+
+            //string wwwRootPath = webHostEnvironment.WebRootPath;
+            //string fileName = Path.GetFileNameWithoutExtension(itemView.ImageFile.FileName);
+            //string extension = Path.GetExtension(itemView.ImageFile.FileName);
+            ////itemView.ItemImage = fileName = fileName + DateTime.Now.ToString("yymmsfff") + extension;
+            //string path = Path.Combine(wwwRootPath + "/Images", fileName);
+
+            //using (var filestream = new FileStream(path, FileMode.Open))
+            //{
+            //    await itemView.ImageFile.CopyToAsync(filestream);
+            //}
+
 
             if (result != null)
             { 

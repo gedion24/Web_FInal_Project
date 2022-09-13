@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElectronicsStore.Migrations
 {
     [DbContext(typeof(ElectronicsStoreDataContext))]
-    [Migration("20220913113133_store")]
+    [Migration("20220913125047_store")]
     partial class store
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -123,6 +123,10 @@ namespace ElectronicsStore.Migrations
                     b.Property<string>("Condition")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Id")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("ItemDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -145,6 +149,8 @@ namespace ElectronicsStore.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ItemId");
+
+                    b.HasIndex("Id");
 
                     b.ToTable("item");
                 });
@@ -284,6 +290,17 @@ namespace ElectronicsStore.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("ElectronicsStore.Models.Items", b =>
+                {
+                    b.HasOne("ElectronicsStore.Areas.Identity.Data.ElectronicsStoreUser", "electronicsStoresUser")
+                        .WithMany()
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("electronicsStoresUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
