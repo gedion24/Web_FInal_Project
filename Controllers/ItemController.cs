@@ -61,7 +61,7 @@ namespace ElectronicsStore.Controllers
                 //  ItemId = long.newLong(),
                 ItemId = Guid.NewGuid(),
                 SellerId = Guid.NewGuid(),
-                Id =electronicsStore.Id,
+            //    Id =electronicsStore.Id,
                 
                   
                 

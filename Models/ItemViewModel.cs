@@ -18,10 +18,10 @@ namespace ElectronicsStore.Models
 
         // The '?' means the value set on these variables is `NULL`
         // [Required] means the value set on these variables is `NOT NULL`
-        [Required]
-        public string Id { get; set; }
-        [ForeignKey("Id")]
-        public virtual ElectronicsStoreUser electronicsStoresUser { get; set; }
+        //[Required]
+        //public string Id { get; set; }
+        //[ForeignKey("Id")]
+        //public virtual ElectronicsStoreUser electronicsStoresUser { get; set; }
 
 
         [Required]

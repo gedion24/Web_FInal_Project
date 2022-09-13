@@ -23,10 +23,10 @@ public class Items
     //[Key]
     public Guid SellerId { get; set; }
 
-    [Required]
-    public string Id { get; set; }
-    [ForeignKey("Id")]
-    public virtual ElectronicsStoreUser electronicsStoresUser { get; set; }
+    //[Required]
+    //public string Id { get; set; }
+    //[ForeignKey("Id")]
+    //public virtual ElectronicsStoreUser electronicsStoresUser { get; set; }
 
 
     // The '?' means the value set on these variables is `NULL`

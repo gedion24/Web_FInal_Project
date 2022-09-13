@@ -55,6 +55,25 @@ namespace ElectronicsStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "item",
+                columns: table => new
+                {
+                    ItemId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SellerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ItemImage = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ItemStatus = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    ItemDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Condition = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Amount = table.Column<long>(type: "bigint", nullable: true),
+                    PricePerItem = table.Column<long>(type: "bigint", nullable: true),
+                    brand = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_item", x => x.ItemId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -160,34 +179,6 @@ namespace ElectronicsStore.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "item",
-                columns: table => new
-                {
-                    ItemId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SellerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ItemImage = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ItemStatus = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    ItemDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Condition = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Amount = table.Column<long>(type: "bigint", nullable: true),
-                    PricePerItem = table.Column<long>(type: "bigint", nullable: true),
-                    brand = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_item", x => x.ItemId);
-                    table.ForeignKey(
-                        name: "FK_item_AspNetUsers_Id",
-                        column: x => x.Id,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade,
-                        onUpdate: ReferentialAction.Cascade
-                        );
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -226,11 +217,6 @@ namespace ElectronicsStore.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_item_Id",
-                table: "item",
-                column: "Id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
