@@ -13,9 +13,18 @@ builder.Services.AddDefaultIdentity<ElectronicsStoreUser>(options => options.Sig
     .AddEntityFrameworkStores<ElectronicsStoreDataContext>();
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(builder =>
+    {
+        builder.JsonSerializerOptions.PropertyNamingPolicy = null;
+        builder.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+
+
+    });
 builder.Services.AddScoped<ISellerService, SellerServices>();
 builder.Services.AddScoped<IItemServices ,ItemServices>();
+
+
 
 var app = builder.Build();
 

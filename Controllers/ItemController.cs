@@ -29,15 +29,27 @@ namespace ElectronicsStore.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Create(ItemViewModel itemView, SellerViewModel sellerView)
+        public async Task<IActionResult> Create(ItemViewModel itemView, SellerViewModel sellerView )
         {
 
 
             //string UninqeFileName = UploadedFile(itemView);
             //itemView.ImageUrl = UninqeFileName;
 
+            
+            
+                string wwwRootPath = webHostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(itemView.ImageFile.FileName);
+                string extension = Path.GetExtension(itemView.ImageFile.FileName);
+                itemView.ItemImage = fileName = fileName + DateTime.Now.ToString("yymmsfff") + extension;
+                string path = Path.Combine(wwwRootPath + "/Images", fileName);
 
-       
+                using (var filestream = new FileStream(path, FileMode.Create))
+                {
+                    await itemView.ImageFile.CopyToAsync(filestream);
+                }
+
+         
 
             var item = new Items()
             { 
@@ -70,12 +82,13 @@ namespace ElectronicsStore.Controllers
             if (result != null)
             { 
 
+
                 var Updatemodel = new UpdateItemModel()
                 {
 
                     SellerId= result.SellerId,
                     ItemId = result.ItemId,
-                    ItemImage = result.ItemImage,
+                    ImageFile = result.ImageFile,
                     ItemStatus = result.ItemStatus,
                     ItemDescription = result.ItemDescription,
                     Condition = result.Condition,
@@ -128,20 +141,20 @@ namespace ElectronicsStore.Controllers
 
         }
 
-        private string UploadedFile(ItemViewModel itemView)
-        {
-            string UninqeFileName = null;
-            if(itemView.ImageFile != null)
-            {
-                string uploadfolder = Path.Combine(webHostEnvironment.WebRootPath, "Images");
-                UninqeFileName = Guid.NewGuid().ToString() + "_" + itemView.ImageFile.FileName;
-                string filepath= Path.Combine(uploadfolder, UninqeFileName);
-                using (var filestream = new FileStream(filepath, FileMode.Create))
-                {
-                    itemView.ImageFile.CopyTo(filestream);
-                }
-            }
-            return UninqeFileName;
-        } 
+        //private string UploadedFile(ItemViewModel itemView)
+        //{
+        //    string UninqeFileName = null;
+        //    if(itemView.ImageFile != null)
+        //    {
+        //        string uploadfolder = Path.Combine(webHostEnvironment.WebRootPath, "Images");
+        //        UninqeFileName = Guid.NewGuid().ToString() + "_" + itemView.ImageFile.FileName;
+        //        string filepath= Path.Combine(uploadfolder, UninqeFileName);
+        //        using (var filestream = new FileStream(filepath, FileMode.Create))
+        //        {
+        //            itemView.ImageFile.CopyTo(filestream);
+        //        }
+        //    }
+        //    return UninqeFileName;
+        //} 
     }
 }

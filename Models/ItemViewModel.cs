@@ -21,8 +21,9 @@ namespace ElectronicsStore.Models
 
 
         [Required]
-
+        [DisplayName("Upload File")]
         public string? ItemImage { get; set; }
+
         [NotMapped]
         [DisplayName("Upload File")]
         public IFormFile ImageFile { get; set; }

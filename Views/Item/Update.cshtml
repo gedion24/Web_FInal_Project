@@ -10,7 +10,7 @@
 @model ElectronicsStore.Models.UpdateItemModel
 
 <h2>Update Product</h2>
-<form action="/Item/Update" method="post">
+<form action="/Item/Update" method="post" enctype="multipart/form-data" >
     <div class="form-row">
         
         <div class="form-group col-md-6">
@@ -20,8 +20,8 @@
     </div>
     <div class="form-row">
      <div class="form-group col-md-6">
-            <label for="ItemImage">ItemImage</label>
-            <input type="text" class="form-control" id="ItemImage" name="ItemImage" placeholder="ItemImage"asp-for="ItemImage">
+           <label for="ImageFile">ImageFile</label>
+            <input type="file" class="form-control" id="ImageFile" name="ImageFile" placeholder="ImageFile" >
         </div>
        
     </div>

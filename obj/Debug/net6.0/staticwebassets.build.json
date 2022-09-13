@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "weYoz5VyPQ/ro2JNDOu0YvcFC2vwZOTFT+fqQGvJpmo=",
+  "Hash": "+TCkLBOqnkShWU3UuKRnkwzfASUb0uCMGwa45lovLaU=",
   "Source": "ElectronicsStore",
   "BasePath": "_content/ElectronicsStore",
   "Mode": "Default",
@@ -1103,6 +1103,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\59936122420912.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "Images/59936122420912.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\59936122420912.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic22511690.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "Images/pic22511690.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\pic22511690.jpg"
     },
     {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\js\\site.js",

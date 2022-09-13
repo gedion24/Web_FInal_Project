@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ElectronicsStore.Models
@@ -16,10 +17,14 @@ namespace ElectronicsStore.Models
         // The '?' means the value set on these variables is `NULL`
         // [Required] means the value set on these variables is `NOT NULL`
 
-        
-        [Required]
 
+        [Required]
+        [DisplayName("ItemImage")]
         public string? ItemImage { get; set; }
+
+        [NotMapped]
+        [DisplayName("ItemImage")]
+        public IFormFile ImageFile { get; set; }
 
         [StringLength(10)]
         public string? ItemStatus { get; set; }

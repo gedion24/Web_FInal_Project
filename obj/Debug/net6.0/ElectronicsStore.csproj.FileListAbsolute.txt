@@ -282,9 +282,6 @@ C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.RazorAssemblyInfo.cache
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.RazorAssemblyInfo.cs
-C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.dll
-C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\refint\ElectronicsStore.dll
-C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.pdb
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\appsettings.json
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\ElectronicsStore.staticwebassets.runtime.json
@@ -546,5 +543,8 @@ C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\scopedcss\bundle\ElectronicsStore.styles.css
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\scopedcss\projectbundle\ElectronicsStore.bundle.scp.css
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.csproj.CopyComplete
+C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.dll
+C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\refint\ElectronicsStore.dll
+C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.pdb
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.genruntimeconfig.cache
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ref\ElectronicsStore.dll
