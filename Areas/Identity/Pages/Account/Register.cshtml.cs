@@ -39,6 +39,7 @@ namespace ElectronicsStore.Areas.Identity.Pages.Account
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
+            
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();

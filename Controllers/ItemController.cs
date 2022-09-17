@@ -4,7 +4,7 @@ using ElectronicsStore.Models.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using System.Security.Claims;
 namespace ElectronicsStore.Controllers
 {
     public class ItemController : Controller
@@ -12,11 +12,12 @@ namespace ElectronicsStore.Controllers
         
         public readonly ElectronicsStoreDataContext ecd;
         public readonly IWebHostEnvironment webHostEnvironment;
-        public ItemController(ElectronicsStoreDataContext EDC, IWebHostEnvironment IWE)
+        private readonly UserManager<ElectronicsStoreUser> _userManager;
+        public ItemController(ElectronicsStoreDataContext EDC, IWebHostEnvironment IWE, UserManager<ElectronicsStoreUser> userManager)
         {
             this.ecd = EDC;
-            this.webHostEnvironment = IWE; 
-
+            this.webHostEnvironment = IWE;
+            _userManager = userManager;
         }
         public async Task<IActionResult> Index()
         {
@@ -38,9 +39,8 @@ namespace ElectronicsStore.Controllers
             //string UninqeFileName = UploadedFile(itemView);
             //itemView.ImageUrl = UninqeFileName;
 
-            
-            
-                string wwwRootPath = webHostEnvironment.WebRootPath;
+            var user = await _userManager.GetUserAsync(User);
+            string wwwRootPath = webHostEnvironment.WebRootPath;
                 string fileName = Path.GetFileNameWithoutExtension(itemView.ImageFile.FileName);
                 string extension = Path.GetExtension(itemView.ImageFile.FileName);
                 itemView.ItemImage = fileName = fileName + DateTime.Now.ToString("yymmsfff") + extension;
@@ -51,7 +51,7 @@ namespace ElectronicsStore.Controllers
                     await itemView.ImageFile.CopyToAsync(filestream);
                 }
 
-            
+
 
 
 
@@ -61,10 +61,11 @@ namespace ElectronicsStore.Controllers
                 //  ItemId = long.newLong(),
                 ItemId = Guid.NewGuid(),
                 SellerId = Guid.NewGuid(),
-            //    Id =electronicsStore.Id,
-                
-                  
-                
+                Id = user.Id,
+
+
+
+
                 ItemImage = itemView.ItemImage,
                 ItemStatus = itemView.ItemStatus,
                 ItemDescription = itemView.ItemDescription,
@@ -80,51 +81,61 @@ namespace ElectronicsStore.Controllers
              return RedirectToAction("Index");
         }
 
-        [HttpGet]
-
-        public async Task<IActionResult> Update(Guid Id, ItemViewModel itemView)
+        [HttpPost]
+        public async Task<IActionResult> Update(Guid Id, ItemViewModel itemView )
         {
-            var result = await ecd.item.FirstOrDefaultAsync(x => x.ItemId== Id);
-
-            //string wwwRootPath = webHostEnvironment.WebRootPath;
-            //string fileName = Path.GetFileNameWithoutExtension(itemView.ImageFile.FileName);
-            //string extension = Path.GetExtension(itemView.ImageFile.FileName);
-            ////itemView.ItemImage = fileName = fileName + DateTime.Now.ToString("yymmsfff") + extension;
-            //string path = Path.Combine(wwwRootPath + "/Images", fileName);
-
-            //using (var filestream = new FileStream(path, FileMode.Open))
-            //{
-            //    await itemView.ImageFile.CopyToAsync(filestream);
-            //}
+           
+                var result = await ecd.item.FirstOrDefaultAsync(x => x.ItemId == Id);
 
 
-            if (result != null)
-            { 
-
-
-                var Updatemodel = new UpdateItemModel()
+                if (result != null)
                 {
 
-                    SellerId= result.SellerId,
-                    ItemId = result.ItemId,
-                    ImageFile = result.ImageFile,
-                    ItemStatus = result.ItemStatus,
-                    ItemDescription = result.ItemDescription,
-                    Condition = result.Condition,
-                    Amount = result.Amount,
-                    PricePerItem = result.PricePerItem,
-                    brand = result.brand
+                    string wwwRootPath = webHostEnvironment.WebRootPath;
+                    var Updatemodel = new UpdateItemModel()
+                    {
 
-                };
-                return await Task.Run(() => View("Update", Updatemodel));
-            }
-            return RedirectToAction("Index");
+                        SellerId = itemView.SellerId,
+                        ItemId = itemView.ItemId,
+                        ItemStatus = itemView.ItemStatus,
+                        ItemDescription = itemView.ItemDescription,
+                        Condition = itemView.Condition,
+                        Amount = itemView.Amount,
+                        PricePerItem = itemView.PricePerItem,
+                        brand = itemView.brand
+
+                    };
+                    if (itemView.ImageFile != null)
+                    {
+                    string fileName = Path.GetFileNameWithoutExtension(itemView.ImageFile.FileName);
+                        string extension = Path.GetExtension(itemView.ImageFile.FileName);
+                        itemView.ItemImage = fileName = fileName + DateTime.Now.ToString("yymmsfff") + extension;
+                        string path = Path.Combine(wwwRootPath + "/Images", fileName);
+
+                        using (var filestream = new FileStream(path, FileMode.Create))
+                        {
+                            await itemView.ImageFile.CopyToAsync(filestream);
+                        }
+                        Updatemodel.ItemImage = itemView.ItemImage;
+                    }
+
+
+
+
+
+                return RedirectToAction("Index");
+                }
+                return RedirectToAction("Index");
+
+            
 
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> Update(UpdateItemModel model)
         {
+
+            Console.WriteLine("dafdsaaaaaaaaaaaaaaaaaasadf");
             var result = await ecd.item.FindAsync(model.ItemId);
             if (result != null)
             {
@@ -138,9 +149,10 @@ namespace ElectronicsStore.Controllers
 
 
                 await ecd.SaveChangesAsync();
-            return RedirectToAction("Index");
+                return await Task.Run(() => View("Update", result));
+              
             }
-           
+
             return RedirectToAction("Index");
         }
 
