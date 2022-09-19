@@ -82,74 +82,73 @@ namespace ElectronicsStore.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Update(UpdateItemModel model)
+        public async Task<IActionResult> Update(Guid id)
         {
-             //var result = await ecd.item.FirstOrDefaultAsync(x => x.ItemId == Id);
-            Console.WriteLine("dafdsaaaaaaaaaaaaaaaaaasadf");
-            var result = await ecd.item.FindAsync(model.ItemId);
-            if (result != null)
+            var item = await ecd.item.FirstOrDefaultAsync(x => x.ItemId == id);
+
+
+
+            if (item != null)
             {
-                result.ItemImage = model.ItemImage;
-                result.ItemStatus = model.ItemStatus;
-                result.ItemDescription = model.ItemDescription;
-                result.Condition = model.Condition;
-                result.Amount = model.Amount;
-                result.PricePerItem = model.PricePerItem;
-                result.brand = model.brand;
+                var viewModel = new UpdateItemModel();
+                 
+                viewModel.ItemId = item.ItemId;
+                viewModel.ItemImage = item.ItemImage;
+                viewModel.ItemStatus = item.ItemStatus;
+                viewModel.ItemDescription = item.ItemDescription;
+                viewModel.Condition = item.Condition;
+                viewModel.Amount = item.Amount;
+                viewModel.PricePerItem = item.PricePerItem;
+                viewModel.brand = item.brand;
 
-
-                await ecd.SaveChangesAsync();
-                return await Task.Run(() => View("Update", result));
-
+                return  await Task.Run(()=>View(viewModel));
             }
-
             return RedirectToAction("Index");
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Update(Guid Id, ItemViewModel itemView)
+
+        public async Task<IActionResult> Update( UpdateItemModel model)
         {
-
-            var result = await ecd.item.FirstOrDefaultAsync(x => x.ItemId == Id);
-
-
+            var result = await ecd.item.FindAsync(model.ItemId);
             if (result != null)
             {
 
                 string wwwRootPath = webHostEnvironment.WebRootPath;
-                var Updatemodel = new UpdateItemModel()
+                
                 {
-
-                    SellerId = itemView.SellerId,
-                    ItemId = itemView.ItemId,
-                    ItemStatus = itemView.ItemStatus,
-                    ItemDescription = itemView.ItemDescription,
-                    Condition = itemView.Condition,
-                    Amount = itemView.Amount,
-                    PricePerItem = itemView.PricePerItem,
-                    brand = itemView.brand
+                    result.SellerId = model.SellerId;
+                  
+                    result.ItemId = model.ItemId;
+                    result.ItemStatus = model.ItemStatus;
+                    result.ItemDescription = model.ItemDescription;
+                    result.Condition = model.Condition;
+                    result.Amount = model.Amount;
+                    result.PricePerItem = model.PricePerItem;
+                    result.brand = model.brand;
 
                 };
-                if (itemView.ImageFile != null)
+                if (model.ImageFile != null)
                 {
-                    string fileName = Path.GetFileNameWithoutExtension(itemView.ImageFile.FileName);
-                    string extension = Path.GetExtension(itemView.ImageFile.FileName);
-                    itemView.ItemImage = fileName = fileName + DateTime.Now.ToString("yymmsfff") + extension;
+                    string fileName = Path.GetFileNameWithoutExtension(model.ImageFile.FileName);
+                    string extension = Path.GetExtension(model.ImageFile.FileName);
+                    model.ItemImage = fileName = fileName + DateTime.Now.ToString("yymmsfff") + extension;
                     string path = Path.Combine(wwwRootPath + "/Images", fileName);
 
                     using (var filestream = new FileStream(path, FileMode.Create))
                     {
-                        await itemView.ImageFile.CopyToAsync(filestream);
+                        await model.ImageFile.CopyToAsync(filestream);
                     }
-                    Updatemodel.ItemImage = itemView.ItemImage;
+                    
+                    result.ItemImage = model.ItemImage;
+
+                    await ecd.SaveChangesAsync();
                 }
-
-
-
-
+                await ecd.SaveChangesAsync();
 
                 return RedirectToAction("Index");
+
             }
             return RedirectToAction("Index");
 

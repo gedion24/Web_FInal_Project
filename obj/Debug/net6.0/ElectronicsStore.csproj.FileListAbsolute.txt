@@ -301,7 +301,6 @@ C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.Build.Locator.dll
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -548,3 +547,6 @@ C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.pdb
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ElectronicsStore.genruntimeconfig.cache
 C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\obj\Debug\net6.0\ref\ElectronicsStore.dll
+C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.Build.dll
+C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.Build.Framework.dll
+C:\Users\Gedi G\Desktop\4th year\3rd term\web 2\Web_FInal_Project\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
