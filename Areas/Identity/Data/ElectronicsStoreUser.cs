@@ -37,5 +37,7 @@ public class ElectronicsStoreUser : IdentityUser
     public string SUsername { get; set; }
     [Required]
     public string SPassword { get; set; }
+
+    public List<Items> Items { get; set; }
 }
 

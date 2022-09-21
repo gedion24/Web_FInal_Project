@@ -21,6 +21,7 @@ builder.Services.AddControllersWithViews()
 
 
     });
+//builder.Services.AddDefaultIdentity<ElectronicsStoreUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ElectronicsStoreUser>();
 builder.Services.AddScoped<ISellerService, SellerServices>();
 builder.Services.AddScoped<IItemServices ,ItemServices>();
 

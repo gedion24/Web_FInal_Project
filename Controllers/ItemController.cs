@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Linq;
 namespace ElectronicsStore.Controllers
 {
     public class ItemController : Controller
@@ -20,11 +21,31 @@ namespace ElectronicsStore.Controllers
             _userManager = userManager;
         }
         public async Task<IActionResult> Index()
+
         {
-            var result = await ecd.item.ToListAsync();
+
+            //if (user == null)
+            //{
+            //    return NotFound();
+            //}
+            //else
+            //{
+            //    ElectronicsStoreUser userid =  _userManager.FindByIdAsync(User).Result;
+            //    return View(userid);
+            //}
+
+
+            //var result = await ecd.item.ToListAsync();
+            var uid = _userManager.GetUserId(User);
+            var result = await ecd.item.Where(x => x.Id == uid).ToListAsync();
+           
+          //  Sellers s_user = _cs.Seller.Where(x => x.SUsername == se.SUsername && x.SPassword == se.SPassword).SingleOrDefault();
             return View(result);
+
+
         }
-        [HttpGet]
+
+        [HttpGet]   
         public IActionResult Create()
         {
             return View();
