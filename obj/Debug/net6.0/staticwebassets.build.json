@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jTgdbwnpTfykbWiNR1PEt7u2YQjqUmoIyrSXFHn5eVo=",
+  "Hash": "Gwr8t56NoCsDyv+/jmyby98rlsYa5JT0VzrxswU/FGs=",
   "Source": "ElectronicsStore",
   "BasePath": "_content/ElectronicsStore",
   "Mode": "Default",
@@ -1428,6 +1428,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\photo_2020-03-08_03-14-5622210451.jpg"
     },
     {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\photo_2020-03-08_03-14-56224850149.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "Images/photo_2020-03-08_03-14-56224850149.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\photo_2020-03-08_03-14-56224850149.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\photo_2020-03-08_03-14-5622563089.jpg",
       "SourceId": "ElectronicsStore",
       "SourceType": "Discovered",
@@ -1632,6 +1649,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\pic22511690.jpg"
     },
     {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic22532100.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "Images/pic22532100.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\pic22532100.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic225332913.jpg",
       "SourceId": "ElectronicsStore",
       "SourceType": "Discovered",
@@ -1647,6 +1681,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\pic225332913.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic225439713.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "Images/pic225439713.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\pic225439713.jpg"
     },
     {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic225636015.jpg",

@@ -177,6 +177,11 @@ namespace ElectronicsStore.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult Delete()
+        {
+            return View();
+        }
 
         [HttpPost]
 

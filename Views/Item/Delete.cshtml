@@ -3,3 +3,16 @@
 *@
 @{
 }
+@{
+    ViewData["Title"] = "Delete";
+}
+@model ElectronicsStore.Models.UpdateItemModel
+
+
+
+<h1>Are u sure u want to delete this itme</h1>
+
+
+    <button class="btn btn-outline-danger" asp-action="Delete"
+                                                 asp-controller="item" >Delete</button>
+    <a class="btn btn-danger" href="/Selller/index">Cancel</a>
