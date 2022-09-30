@@ -21,7 +21,6 @@ builder.Services.AddControllersWithViews()
 
 
     });
-//builder.Services.AddDefaultIdentity<ElectronicsStoreUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ElectronicsStoreUser>();
 builder.Services.AddScoped<ISellerService, SellerServices>();
 builder.Services.AddScoped<IItemServices ,ItemServices>();
 
@@ -47,7 +46,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Item}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();   
 

@@ -37,6 +37,7 @@ namespace ElectronicsStore.Controllers
 
             //var result = await ecd.item.ToListAsync();
             var uid = _userManager.GetUserId(User);
+            
             var result = await ecd.item.Where(x => x.Id == uid).ToListAsync();
            
           //  Sellers s_user = _cs.Seller.Where(x => x.SUsername == se.SUsername && x.SPassword == se.SPassword).SingleOrDefault();
@@ -53,7 +54,7 @@ namespace ElectronicsStore.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Create(ItemViewModel itemView, SellerViewModel sellerView, ElectronicsStoreUser electronicsStore )
+        public async Task<IActionResult> Create(ItemViewModel itemView, ElectronicsStoreUser electronicsStore )
         {
 
 
@@ -177,19 +178,26 @@ namespace ElectronicsStore.Controllers
 
         }
 
-        [HttpGet]
-        public IActionResult Delete()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> Delete()
+        //{
+        //    ////var uid = ecd.item.Where(x => x.ItemId == id );
+        //    // var result = await ecd.item.Where.ToListAsync();
+        //    //var result = await ecd.item.FindAsync(model.ItemId);
+        //    //var result = await ecd.item.FindAsync(items.ItemId);
+
+        //    return View();
+        //}
 
         [HttpPost]
 
-        public async Task<IActionResult> Delete(UpdateItemModel model)
+        public async Task<IActionResult> Delete(Guid id)
+            
         {
-            var result = await ecd.item.FindAsync(model.ItemId);
+            var result = await ecd.item.FindAsync(id);
             if (result != null)
             {
+
                 ecd.item.Remove(result);
                 await ecd.SaveChangesAsync();
 
@@ -199,20 +207,5 @@ namespace ElectronicsStore.Controllers
 
         }
 
-        //private string UploadedFile(ItemViewModel itemView)
-        //{
-        //    string UninqeFileName = null;
-        //    if(itemView.ImageFile != null)
-        //    {
-        //        string uploadfolder = Path.Combine(webHostEnvironment.WebRootPath, "Images");
-        //        UninqeFileName = Guid.NewGuid().ToString() + "_" + itemView.ImageFile.FileName;
-        //        string filepath= Path.Combine(uploadfolder, UninqeFileName);
-        //        using (var filestream = new FileStream(filepath, FileMode.Create))
-        //        {
-        //            itemView.ImageFile.CopyTo(filestream);
-        //        }
-        //    }
-        //    return UninqeFileName;
-        //} 
     }
 }

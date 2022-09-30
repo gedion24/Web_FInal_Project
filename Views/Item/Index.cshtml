@@ -46,16 +46,17 @@
 
                 
 
-                <td>
-              <a href="/Item/details/@items.SellerId" class=" btn btn-outline-info">Details</a>
-            </td>
+             
             
             <td>
                 <a href="/Item/Update/@items.ItemId" class=" btn btn-outline-primary">uPDATE</a>
             </td>
             <td>
-                <a href="/product/Delete/@items.ItemId" class=" btn btn-outline-danger">Delete</a>
-
+                <form asp-action="Delete" asp-route-id="@items.ItemId">
+                    <button type="submit" class="btn btn-warning">Delete</button>
+                </form>
+@*               <a href="/Item/Delete/@items.ItemId" class=" btn btn-outline-primary">Delete</a>
+*@              @*  *@
             </td>
              
         }
