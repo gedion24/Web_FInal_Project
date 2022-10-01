@@ -82,19 +82,23 @@ namespace ElectronicsStore.Controllers
 
                 //  ItemId = long.newLong(),
                 ItemId = Guid.NewGuid(),
-                SellerId = Guid.NewGuid(),
+              //  SellerId = Guid.NewGuid(),
                 Id = user.Id,
 
 
 
 
                 ItemImage = itemView.ItemImage,
+                ItemName = itemView.ItemName,
                 ItemStatus = itemView.ItemStatus,
                 ItemDescription = itemView.ItemDescription,
                 Condition = itemView.Condition,
                 Amount = itemView.Amount,
                 PricePerItem = itemView.PricePerItem,
-                brand =itemView.brand
+                brand =itemView.brand,
+                SellerEmail= itemView.SellerEmail,
+                SellerPhonenumber= itemView.SellerPhonenumber,
+               
                 
 
             };
@@ -116,12 +120,15 @@ namespace ElectronicsStore.Controllers
                  
                 viewModel.ItemId = item.ItemId;
                 viewModel.ItemImage = item.ItemImage;
+                viewModel.ItemImage = item.ItemImage;
                 viewModel.ItemStatus = item.ItemStatus;
                 viewModel.ItemDescription = item.ItemDescription;
                 viewModel.Condition = item.Condition;
                 viewModel.Amount = item.Amount;
                 viewModel.PricePerItem = item.PricePerItem;
                 viewModel.brand = item.brand;
+                viewModel.SellerEmail = item.SellerEmail;
+                viewModel.SellerPhonenumber = item.SellerPhonenumber;
 
                 return  await Task.Run(()=>View(viewModel));
             }
@@ -140,15 +147,18 @@ namespace ElectronicsStore.Controllers
                 string wwwRootPath = webHostEnvironment.WebRootPath;
                 
                 {
-                    result.SellerId = model.SellerId;
+                    //result.SellerId = model.SellerId;
                   
                     result.ItemId = model.ItemId;
+                    result.ItemName = model.ItemName;
                     result.ItemStatus = model.ItemStatus;
                     result.ItemDescription = model.ItemDescription;
                     result.Condition = model.Condition;
                     result.Amount = model.Amount;
                     result.PricePerItem = model.PricePerItem;
                     result.brand = model.brand;
+                    result.SellerEmail = model.SellerEmail;
+                    result.SellerPhonenumber = model.SellerPhonenumber;
 
                 };
                 if (model.ImageFile != null)

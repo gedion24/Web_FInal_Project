@@ -17,11 +17,13 @@ public class Items
     [Key]
     public Guid ItemId { get; set; }
 
-    //Navigation property   [Key, Column(Order = 0),ForeignKey("SellerId")]   [ForeignKey("SellerId")]
-    [ForeignKey("Sellers")]
-    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    //[Key]
-    public Guid SellerId { get; set; }
+    public string ItemName { get; set; }
+
+    ////Navigation property   [Key, Column(Order = 0),ForeignKey("SellerId")]   [ForeignKey("SellerId")]
+    //[ForeignKey("Sellers")]
+    ////[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    ////[Key]
+    //public Guid SellerId { get; set; }
 
     [Required]
     public string Id { get; set; }
@@ -53,6 +55,9 @@ public class Items
     public long? Amount { get; set; }
     public long? PricePerItem { get; set; }
     public string brand { get; set; }
+
+    public string SellerEmail { get; set; }
+    public string SellerPhonenumber{ get; set; }
 
 
 

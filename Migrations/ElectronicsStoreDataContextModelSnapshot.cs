@@ -132,6 +132,10 @@ namespace ElectronicsStore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ItemName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ItemStatus")
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
@@ -139,8 +143,13 @@ namespace ElectronicsStore.Migrations
                     b.Property<long?>("PricePerItem")
                         .HasColumnType("bigint");
 
-                    b.Property<Guid>("SellerId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("SellerEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SellerPhonenumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("brand")
                         .IsRequired()
@@ -293,7 +302,7 @@ namespace ElectronicsStore.Migrations
             modelBuilder.Entity("ElectronicsStore.Models.Items", b =>
                 {
                     b.HasOne("ElectronicsStore.Areas.Identity.Data.ElectronicsStoreUser", "electronicsStoresUser")
-                        .WithMany()
+                        .WithMany("Items")
                         .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -350,6 +359,11 @@ namespace ElectronicsStore.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ElectronicsStore.Areas.Identity.Data.ElectronicsStoreUser", b =>
+                {
+                    b.Navigation("Items");
                 });
 #pragma warning restore 612, 618
         }

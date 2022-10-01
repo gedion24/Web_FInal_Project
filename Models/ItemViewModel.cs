@@ -11,11 +11,11 @@ namespace ElectronicsStore.Models
         [Key]
         public Guid ItemId { get; set; }
 
-        //Navigation property
-        [ForeignKey("Sellers")]
-        public Guid SellerId { get; set; }
+        ////Navigation property
+        //[ForeignKey("Sellers")]
+        //public Guid SellerId { get; set; }
 
-
+        public string ItemName { get; set; }
         // The '?' means the value set on these variables is `NULL`
         // [Required] means the value set on these variables is `NOT NULL`
         //[Required]
@@ -41,5 +41,8 @@ namespace ElectronicsStore.Models
         public long? Amount { get; set; }
         public long? PricePerItem { get; set; }
         public string brand { get; set; }
+        public string SellerEmail { get; set; }
+        public string SellerPhonenumber { get; set; }
+
     }
 }
