@@ -22,12 +22,28 @@ namespace ElectronicsStore.Controllers
         //{
         //    _logger = logger;
         //}
-
+        
         public async Task<IActionResult> Index()
         {
             var result = await ecd.item.ToListAsync();
+          
             return View(result);
         }
+        [HttpGet]
+        public async Task<IActionResult> Index(string Search)
+        {
+           
+            //Search bar
+            ViewData["CurrentSearch"] = Search;
+
+            var brand = from b in ecd.item select b;
+            if (!String.IsNullOrEmpty(Search))
+            {
+                brand = brand.Where(b => b.brand.Contains(Search));
+            }
+            return View(brand.ToList());
+        }
+
 
         public async Task<IActionResult> Wellcome()
         {

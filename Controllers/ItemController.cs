@@ -17,29 +17,19 @@ namespace ElectronicsStore.Controllers
         {
             this.ecd = EDC;
             this.webHostEnvironment = IWE;
-            _userManager = userManager;
+             this. _userManager = userManager;
         }
+        
         public async Task<IActionResult> Index()
 
         {
 
-            //if (user == null)
-            //{
-            //    return NotFound();
-            //}
-            //else
-            //{
-            //    ElectronicsStoreUser userid =  _userManager.FindByIdAsync(User).Result;
-            //    return View(userid);
-            //}
-
-
-            //var result = await ecd.item.ToListAsync();
+           
             var uid = _userManager.GetUserId(User);
             
             var result = await ecd.item.Where(x => x.Id == uid).ToListAsync();
            
-          //  Sellers s_user = _cs.Seller.Where(x => x.SUsername == se.SUsername && x.SPassword == se.SPassword).SingleOrDefault();
+           
             return View(result);
 
 
@@ -146,7 +136,7 @@ namespace ElectronicsStore.Controllers
                 string wwwRootPath = webHostEnvironment.WebRootPath;
                 
                 {
-                    //result.SellerId = model.SellerId;
+                    
                   
                     result.ItemId = model.ItemId;
                     result.ItemName = model.ItemName;
@@ -187,16 +177,7 @@ namespace ElectronicsStore.Controllers
 
         }
 
-        //[HttpGet]
-        //public async Task<IActionResult> Delete()
-        //{
-        //    ////var uid = ecd.item.Where(x => x.ItemId == id );
-        //    // var result = await ecd.item.Where.ToListAsync();
-        //    //var result = await ecd.item.FindAsync(model.ItemId);
-        //    //var result = await ecd.item.FindAsync(items.ItemId);
-
-        //    return View();
-        //}
+      
 
         [HttpPost]
 
@@ -215,6 +196,20 @@ namespace ElectronicsStore.Controllers
             return RedirectToAction("Index");
 
         }
+
+        //[HttpPost]
+
+        //public async Task<IActionResult> Deleteuser(string id)
+        //{
+        //    var user = await _userManager.GetUserAsync(User);
+        //    if (user != null)
+        //    {
+        //        var result = await _userManager.DeleteAsync(user);
+        //        return RedirectToAction("Index");
+        //    }
+           
+        //    return View();
+        //}
 
     }
 }

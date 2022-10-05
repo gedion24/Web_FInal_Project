@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0+T5XgFzSGEXyEQ0AEFzf1NykJdQvDYl9gdWLaRXljc=",
+  "Hash": "tbON11vJOJM7D/48X2TXDE505lSd6rKMbHVya9kGtbc=",
   "Source": "ElectronicsStore",
   "BasePath": "_content/ElectronicsStore",
   "Mode": "Default",
@@ -1224,6 +1224,23 @@
       "OriginalItemSpec": "wwwroot\\css\\UpdateCss.css"
     },
     {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\css\\WellcomeCss.css",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "css/WellcomeCss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\WellcomeCss.css"
+    },
+    {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\favicon.ico",
       "SourceId": "ElectronicsStore",
       "SourceType": "Discovered",
@@ -2021,6 +2038,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\pic22008018.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic220133777.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "Images/pic220133777.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\pic220133777.jpg"
     },
     {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic220238167.jpg",

@@ -69,10 +69,16 @@
             &copy; 2022 - ElectronicsStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>*@
-    <footer>
+    @if (IsSectionDefined("Footer"))
+    {
+        @RenderSection("Footer",false)
+    }
+    else
+    {
+        <footer>
       <div class="newsletter-section">
         <div class="newsletter-sub-container">
-          <div class="prompt">
+         @* <div class="prompt">
               <p>Sign Up For Newsletters</p>
               <p>Be the first to know. Sign Up Today!</p>
           </div>
@@ -80,7 +86,10 @@
           <label>
             <input />
             <button>Sign Up</button>
-          </label>
+          </label>*@
+          <h1>Electronics Store </h1>
+          <h4>A place where u can find what you desire </h4>
+
         </div>
       </div>
   
@@ -90,7 +99,7 @@
             <div class="ftl-main-container">
               <div class="ftl-sub-container">
   
-                <span class="title our-info">Razor</span>
+                <span class="title our-info">Electronics Store</span>
                 <ul>
                   <li>We are a dedicated team of market experts and developers supplying our clients with the best products out there</li>
                   <li>Address: 4710-4890 Breckinridge St, Fayetteville</li>
@@ -101,7 +110,7 @@
   
             </div>
   
-            <div class="ftl-main-container links">
+            @*<div class="ftl-main-container links">
               <div class="ftl-sub-container">
                 <span class="title">Information</span>
   
@@ -140,9 +149,9 @@
                   <li><span>Monitors</span></li>
                 </ul>
               </div>
-            </div>
+            </div>*@
           </div>
-  
+  @*
           <div class="pns">
             <div class="payment">
               <span>Payment:</span>
@@ -152,14 +161,16 @@
               <span>Follow Us:</span>
               <img src="./socials.jpg" alt="">
             </div>
-          </div>
+          </div>*@
       
           <div class="copyright">
-            <span>Copyright 2022 <strong>©RazorStore</strong>. All Rights Reserved</span>
+            <span>Copyright 2022 <strong>©Electronics Store</strong>. All Rights Reserved</span>
           </div>
         </div>
       </div>
     </footer>
+    }
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
