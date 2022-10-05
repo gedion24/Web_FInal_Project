@@ -1,0 +1,94 @@
+﻿@font-face {
+    font-family: poppins;
+    src: url('./Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: poppinsl;
+    src: url('./Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: poppinsb;
+    src: url('./Poppins/Poppins-Bold.ttf');
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-inline:3em;
+}
+
+table {
+    border-collapse: collapse;
+    height: fit-content;
+    display: block;
+    margin-block: 7em;
+}
+
+tr:nth-of-type(even) {
+    background-color: #eee;
+}
+
+tr:last-of-type {
+    border-bottom: 3px solid #266cfb;
+}
+
+tr:hover {
+    background-color: #dcdcdc;
+}
+
+tr:not(:first-of-type) {
+    height: 8em;
+}
+
+th, td {
+    text-align: center;
+    padding-inline: 2em;
+    padding-block: 7px;
+    text-transform: capitalize;
+}
+
+th {
+    background-color: #266cfb;
+    color: white;
+    font-family: poppins;
+    font-size: 1.2em;
+    font-weight: unset;
+    white-space: nowrap;
+}
+
+td {
+    font-family: poppinsl;
+    text-transform: capitalize;
+}
+
+.edit {
+    display: flex;
+}
+
+    .edit button {
+        border: none;
+        background: none;
+        margin-left: 1em;
+    }
+
+        .edit button:hover {
+            color: unset !important;
+            background-color: unset !important;
+        }
+
+    .edit svg {
+        width: 27px;
+        height: 27px;
+        margin-inline: 15px;
+        cursor: pointer;
+    }
+
+    .edit a:hover svg {
+        stroke: #266cfb;
+    }
+
+    .edit button:hover svg {
+        stroke: #266cfb;
+    }

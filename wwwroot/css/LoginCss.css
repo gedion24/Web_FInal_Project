@@ -1,0 +1,154 @@
+﻿
+@font-face {
+    font-family: poppins;
+    src: url('./Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: poppinsl;
+    src: url('./Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: poppinsb;
+    src: url('./Poppins/Poppins-Bold.ttf');
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+main {
+    min-height: 100vh;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: poppinsl;
+}
+
+.form-wrapper {
+    display: flex;
+    height: 40em;
+    width: 75em;
+    box-shadow: #64646f33 0px 7px 29px 0px;
+}
+
+.welcome-wrapper {
+    width: 60%;
+    border: 1px solid #eee;
+    background: #266cfb url('./undraw_visionary_technology_re_jfp7.svg') center 30%/50% no-repeat;
+    color: white;
+    display: flex;
+    padding: 4em;
+}
+
+.welcome-section {
+    margin-top: auto;
+}
+
+    .welcome-section .text {
+        width: 80%;
+    }
+
+    .welcome-section .title {
+        margin-bottom: 1em;
+    }
+
+    .welcome-section .title, .login-section .title {
+        font-size: 2em;
+        font-family: poppinsb;
+    }
+
+.login-wrapper {
+    width: 40%;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-section {
+    width: fit-content;
+}
+
+    .login-section a {
+        text-decoration: none;
+        color: #266cfb;
+        cursor: pointer;
+    }
+
+        .login-section a:hover {
+            text-decoration: underline;
+        }
+
+    .login-section .text * {
+        margin-bottom: 1em;
+    }
+
+    .login-section .title {
+        color: #266cfb;
+    }
+
+.create-acc {
+    display: flex;
+}
+
+    .create-acc a {
+        margin-left: 1em;
+    }
+
+form {
+    margin-top: 2em;
+}
+
+    form input:not(.remember) {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        text-transform: lowercase !important;
+        padding-left: 1em;
+        padding-bottom: 10px;
+        outline: none;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    form input:focus {
+        border-bottom-color: #266cfb;
+    }
+
+::placeholder {
+    color: #aaa;
+    text-transform: capitalize;
+}
+
+.remember {
+    margin-top: 1em;
+    margin-right: .5em;
+}
+
+.checkbox {
+    font-family: poppinsl !important;
+}
+
+.sign-in-btn {
+    padding: .5em 2em;
+    background: #266cfb;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-family: poppins;
+    font-size: 1.2em;
+    margin-block: 2em;
+    cursor: pointer;
+    width: 100%;
+    transition-duration: .4s;
+}
+
+    .sign-in-btn:hover {
+        background-color: #333;
+    }

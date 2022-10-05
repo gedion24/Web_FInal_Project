@@ -1,6 +1,5 @@
 ﻿using ElectronicsStore.Areas.Identity.Data;
 using ElectronicsStore.Models;
-using ElectronicsStore.Models.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -120,7 +119,7 @@ namespace ElectronicsStore.Controllers
                  
                 viewModel.ItemId = item.ItemId;
                 viewModel.ItemImage = item.ItemImage;
-                viewModel.ItemImage = item.ItemImage;
+                viewModel.ItemName = item.ItemName;
                 viewModel.ItemStatus = item.ItemStatus;
                 viewModel.ItemDescription = item.ItemDescription;
                 viewModel.Condition = item.Condition;

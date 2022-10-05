@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ElectronicsStore.Areas.Identity.Data;
-using ElectronicsStore.Models.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ElectronicsStoreDataContextConnection") ?? throw new InvalidOperationException("Connection string 'ElectronicsStoreDataContextConnection' not found.");
@@ -21,8 +21,7 @@ builder.Services.AddControllersWithViews()
 
 
     });
-builder.Services.AddScoped<ISellerService, SellerServices>();
-builder.Services.AddScoped<IItemServices ,ItemServices>();
+
 
 
 

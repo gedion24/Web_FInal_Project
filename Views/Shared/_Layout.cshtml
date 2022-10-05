@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ElectronicsStore.styles.css" asp-append-version="true" />
+   @* <link rel="stylesheet" href="~/css/HomeCss.css" asp-append-version="true" />*@
 </head>
 <body>
    
@@ -30,16 +31,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                       @*  <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Seller" asp-action="Create">Create</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Seller" asp-action="Index">view</a>
-
-                        </li>*@
+                       
                         @if (SignInManager.IsSignedIn(User))
                         {
                              <li class="nav-item">
@@ -54,26 +46,119 @@
 
                         
                         
-                        @*<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="Update">update Create</a>
-
-                        </li>*@
+                     
                     </ul>
                 </div>
-                <partial name="_LoginPartial"/>"
+                <partial name="_LoginPartial"/>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
+            @if (IsSectionDefined("css"))
+             {
+              RenderSection("css");
+             }
+            
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @*<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - ElectronicsStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+    </footer>*@
+    <footer>
+      <div class="newsletter-section">
+        <div class="newsletter-sub-container">
+          <div class="prompt">
+              <p>Sign Up For Newsletters</p>
+              <p>Be the first to know. Sign Up Today!</p>
+          </div>
+          
+          <label>
+            <input />
+            <button>Sign Up</button>
+          </label>
+        </div>
+      </div>
+  
+      <div class="foot-container">
+        <div class="foot-links-section">
+          <div class="foot-links">
+            <div class="ftl-main-container">
+              <div class="ftl-sub-container">
+  
+                <span class="title our-info">Razor</span>
+                <ul>
+                  <li>We are a dedicated team of market experts and developers supplying our clients with the best products out there</li>
+                  <li>Address: 4710-4890 Breckinridge St, Fayetteville</li>
+                  <li>Email: support@hasthemes.com</li>
+                  <li>Call Us: (+800)123456789</li>
+                </ul>
+              </div>
+  
+            </div>
+  
+            <div class="ftl-main-container links">
+              <div class="ftl-sub-container">
+                <span class="title">Information</span>
+  
+                <ul class="site-info">
+                  <li><span>About Us</span></li>
+                  <li><span>Secure Payment</span></li>
+                  <li><span>contact us</span></li>
+                  <li><span>sitemap</span></li>
+                  <li><span>stores</span></li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="ftl-main-container links">
+              <div class="ftl-sub-container">
+                <span class="title">Useful Links</span>
+  
+                <ul>
+                  <li><span>legal notice</span></li>
+                  <li><span>Bargains</span></li>
+                  <li><span>new products</span></li>
+                  <li><span>shop history</span></li>
+                  <li><span>login</span></li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="ftl-main-container links">
+              <div class="ftl-sub-container">
+                <span class="title">Categories</span>
+      
+                <ul>
+                  <li><span>Coolants</span></li>
+                  <li><span>Audio and Video</span></li>
+                  <li><span>Gaming</span></li>
+                  <li><span>Monitors</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="pns">
+            <div class="payment">
+              <span>Payment:</span>
+              <img src="./payment.jpg" alt="">
+            </div>
+            <div class="socials">
+              <span>Follow Us:</span>
+              <img src="./socials.jpg" alt="">
+            </div>
+          </div>
+      
+          <div class="copyright">
+            <span>Copyright 2022 <strong>©RazorStore</strong>. All Rights Reserved</span>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

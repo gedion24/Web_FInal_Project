@@ -29,10 +29,13 @@ namespace ElectronicsStore.Controllers
             return View(result);
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Wellcome()
         {
+            
             return View();
         }
+
+
 
         //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         //public IActionResult Error()

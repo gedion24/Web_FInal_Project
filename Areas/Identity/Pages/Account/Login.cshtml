@@ -5,9 +5,67 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1>@ViewData["Title"]</h1>
+@*<h1>@ViewData["Title"]</h1>*@
+    @section css {
+    <link href="@Url.Content("~/css/LoginCss.css")" rel="stylesheet"/>
+}
+<main>
+    <div class="form-wrapper">
+
+      <div class="welcome-wrapper">
+        <div class="welcome-section">
+          <div class="text">
+            <p class="title">welcome!</p>
+            <p class="promo">have all you shoppping needs met with guaranteed satisfaction in one place!</p>
+          </div> 
+        </div>
+      </div>
+      
+      <div class="login-wrapper">
+        <div class="login-section">
+          <div class="text">
+            <p class="title">Login</p>
+
+            <div class="create-acc">
+              <p>don't have an account?</p> 
+              <a  asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Create an account</a>
+            </div>
+
+            <p>it will take less than a minute</p>
+          </div>
+
+          <form  id="account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div>
+              <input type="text" placeholder="username"  asp-for="Input.SUsername" class="form-control" autocomplete="username" aria-required="true" >
+              <span asp-validation-for="Input.SUsername" class="text-danger"> </span>
+             
+            </div>
+
+            <div>
+              <input type="password" placeholder="Password" asp-for="Input.SPassword" class="form-control" autocomplete="current-password" aria-required="true">
+              <span asp-validation-for="Input.SPassword" class="text-danger"></span>
+            </div>
+
+            <div class="checkbox">
+              <label asp-for="Input.RememberMe" class="form-label">
+                  <input class="form-check-input" asp-for="Input.RememberMe" />
+                  @Html.DisplayNameFor(m => m.Input.RememberMe)
+              </label>
+            </div>
+          
+            <button class="sign-in-btn" id="login-submit" type="submit">Sign in</button>
+            <p style="margin-bottom: 1em;"><a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a></p>
+            <p><a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email conformation</a> </p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </main>
 <div class="row">
-    <div class="col-md-4">
+  @* <div class="col-md-4">
         <section>
             <form id="account" method="post">
                 <h2>Use a local account to log in.</h2>
@@ -47,7 +105,8 @@
                 </div>
             </form>
         </section>
-    </div>
+    </div>*@
+
     <div class="col-md-6 col-md-offset-2">
         <section>
             <h3>Use another service to log in.</h3>
@@ -57,7 +116,7 @@
                 {
                     <div>
                         <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
+                            There are no external authentication services configured. See this <a href="https:go.microsoft.com/fwlink/?LinkID=532715">article
                             about setting up this ASP.NET application to support logging in via external services</a>.
                         </p>
                     </div>
