@@ -137,7 +137,7 @@ namespace ElectronicsStore.Areas.Identity.Pages.Account
             {
                 var user = CreateUser();
                // user.ItemId = Input.ItemId;
-                user.SellerId = Input.SellerId;
+              //  user.SellerId = Input.SellerId;
                 user.SellerFname = Input.SellerFname;
                 user.SellerLname = Input.SellerLname;
                 user.SDOB = Input.SDOB;

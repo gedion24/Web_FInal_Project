@@ -12,15 +12,15 @@ builder.Services.AddDbContext<ElectronicsStoreDataContext>(options =>
 builder.Services.AddDefaultIdentity<ElectronicsStoreUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ElectronicsStoreDataContext>();
 
-// Add services to the container.
-builder.Services.AddControllersWithViews()
-    .AddJsonOptions(builder =>
-    {
-        builder.JsonSerializerOptions.PropertyNamingPolicy = null;
-        builder.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+//// Add services to the container.
+//builder.Services.AddControllersWithViews()
+//    .AddJsonOptions(builder =>
+//    {
+//        builder.JsonSerializerOptions.PropertyNamingPolicy = null;
+//        builder.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
 
 
-    });
+//    });
 
 
 

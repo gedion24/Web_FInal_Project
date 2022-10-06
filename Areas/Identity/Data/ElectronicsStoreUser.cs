@@ -12,9 +12,9 @@ namespace ElectronicsStore.Areas.Identity.Data;
 // Add profile data for application users by adding properties to the ElectronicsStoreUser class
 public class ElectronicsStoreUser : IdentityUser
 {
-    [Key]
-  // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public Guid SellerId { get; set; }
+  //  [Key]
+  //// [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+  //  public Guid SellerId { get; set; }
     //public ElectronicsStoreUser electronicsStoresUser { get; set; }
 
     // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -82,9 +82,6 @@ namespace ElectronicsStore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("SellerId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("SellerLname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
