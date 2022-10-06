@@ -34,6 +34,20 @@ namespace ElectronicsStore.Controllers
 
 
         }
+        //[HttpGet]
+        //public async Task<IActionResult> Index(string Search)
+        //{
+
+        //    //Search bar
+        //    ViewData["CurrentSearch"] = Search;
+
+        //    var brand = from b in ecd.item select b;
+        //    if (!String.IsNullOrEmpty(Search))
+        //    {
+        //        brand = brand.Where(b => b.brand.Contains(Search));
+        //    }
+        //    return View(brand.ToList());
+        //}
 
         [HttpGet]   
         public IActionResult Create()
@@ -197,19 +211,7 @@ namespace ElectronicsStore.Controllers
 
         }
 
-        //[HttpPost]
-
-        //public async Task<IActionResult> Deleteuser(string id)
-        //{
-        //    var user = await _userManager.GetUserAsync(User);
-        //    if (user != null)
-        //    {
-        //        var result = await _userManager.DeleteAsync(user);
-        //        return RedirectToAction("Index");
-        //    }
-           
-        //    return View();
-        //}
+       
 
     }
 }

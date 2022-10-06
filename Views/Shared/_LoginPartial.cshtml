@@ -4,6 +4,35 @@
 @inject SignInManager<ElectronicsStoreUser> SignInManager
 @inject UserManager<ElectronicsStoreUser> UserManager
 
+       @section css {
+    <link href="@Url.Content("~/css/LoginPartailCss.css")" rel="stylesheet"/>
+}
+ <div class="account-section">
+    <ul>
+      @if (SignInManager.IsSignedIn(User))
+{
+  <li class="user">
+      <a id="manage" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)</a>
+  </li>
+  <li>
+      <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+          <button class="logout" id="logout" type="submit">Logout</button>
+      </form>
+  </li>
+}
+else
+{
+      <li>
+          <button class="register" > <a id="register" asp-area="Identity" asp-page="/Account/Register">Register</a> </button>
+      </li>
+      <li>
+          <button class="login"> <a id="login" asp-area="Identity" asp-page="/Account/Login">Login</a> </button>
+      </li>
+    }
+      </ul> 
+  </div>
+
+@*
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
@@ -27,3 +56,4 @@ else
 }
 </ul>
 
+*@

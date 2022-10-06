@@ -1,17 +1,4 @@
-﻿@font-face {
-    font-family: poppins;
-    src: url('./Poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: poppinsl;
-    src: url('./Poppins/Poppins-Light.ttf');
-}
-
-@font-face {
-    font-family: poppinsb;
-    src: url('./Poppins/Poppins-Bold.ttf');
-}
+﻿
 main {
     min-height: 100vh;
     height: inherit;
@@ -125,7 +112,9 @@ form {
 }
 
 .checkbox {
-    font-family: poppinsl !important;
+    font-family: poppins !important;
+    font-weight: 500;
+
 }
 
 .sign-up-btn {
@@ -135,6 +124,7 @@ form {
     border: none;
     border-radius: 3px;
     font-family: poppins;
+    font-weight: 500;
     font-size: 1.2em;
     margin-top: 2em;
     cursor: pointer;

@@ -21,15 +21,13 @@ public class ElectronicsStoreDataContext : IdentityDbContext<ElectronicsStoreUse
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
 
-        //builder.ApplyConfiguration(new ApplicationUserEnityConfigration());
-        //builder.Entity<ElectronicsStoreUser>().HasIndex(u => u.SellerId).IsUnique();
-        //builder.Entity<Items>().HasIndex(u => u.SellerId).IsUnique();
+       
 
     }
 
     public DbSet<Items> item { get; set; }
     public DbSet<ElectronicsStoreUser> electronicsStoresUser { get; set; }
-   // public DbSet<Sellers> seller { get; set; }
+  
 
     private class ApplicationUserEnityConfigration : IEntityTypeConfiguration<ElectronicsStoreUser>
     {

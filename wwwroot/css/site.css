@@ -1,17 +1,4 @@
-@font-face {
-    font-family: poppins;
-    src: url('./Poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: poppinsl;
-    src: url('./Poppins/Poppins-Light.ttf');
-}
-
-@font-face {
-    font-family: poppinsb;
-    src: url('./Poppins/Poppins-Bold.ttf');
-}
+/*
 html {
   font-size: 14px;
 }
@@ -29,9 +16,9 @@ html {
 
 body {
   margin-bottom: 60px;
-}
+}*/
 
-/*footer*/
+footer
 .foot-container {
     display: flex;
     justify-content: center;
@@ -61,10 +48,12 @@ body {
 .prompt p:first-of-type {
     font-size: 1.7em;
     font-family: poppins;
+    font-weight: 500;
 }
 
 .prompt p:last-of-type {
-    font-family: poppinsl;
+    font-family: poppins;
+    font-weight: 500;
 }
 
 .newsletter-section label {
@@ -147,7 +136,8 @@ body {
 
     .foot-links ul li, .foot-links ul span {
         margin-block: .5em;
-        font-family: poppinsl;
+        font-family: poppins;
+        font-weight: 500;
     }
 
 .ftl-main-container ul li:hover span {
@@ -187,10 +177,194 @@ body {
 }
 
     .copyright span {
-        font-family: poppinsl;
+        font-family: poppins;
+        font-weight: 500;
     }
 
 strong {
     font-weight: unset;
     color: #266cfb;
 }
+/*search and nav
+*/
+.search-bar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.5em;
+    padding-left: 3em;
+    font-family:poppins;
+    font-weight:500;
+}
+
+    .search-bar-wrapper .nav-brand {
+        font-size: 1.7em;
+        font-family: poppins;
+        font-weight: 600;
+        color: #266cfb;
+        cursor: pointer;
+        text-decoration:none;
+        
+    }
+
+.search-bar {
+    height: 2.3em;
+    width: 30em;
+    margin-inline: auto;
+    display:flex;
+
+}
+
+    .search-bar > * {
+        height: 100%;
+    }
+
+    .search-bar input {
+        border: 1px solid #bdbdbd;
+        border-top-left-radius: 10em;
+        border-bottom-left-radius: 10em;
+        width: 25em;
+        padding-left: 2em;
+        outline: none;
+    }
+
+        .search-bar input:focus {
+            border-color: #266cfb;
+        }
+
+    .search-bar button {
+        background-color: #266cfb;
+        color: white;
+        padding-inline: 2em;
+        border: none;
+        border-top-right-radius: 4em;
+        border-bottom-right-radius: 4em;
+        cursor: pointer;
+        transition-duration: .4s;
+    }
+
+        .search-bar button:hover {
+            background-color: #333;
+        }
+
+.nav-brand p {
+    margin-bottom: 0;
+    
+}
+
+nav {
+    background-color: #266cfb;
+    color: white;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    nav ul {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration:none;
+        list-style:none;
+        width: 40em;
+        height: 100%;
+        margin-bottom:0;
+        font-family:poppins;
+        font-weight:500;
+        font-size:18px;
+    }
+
+    nav .link {
+        position: relative;
+    }
+   
+        nav .link, nav .link a {
+            height: 100%;
+            color:white;
+            text-decoration: none;
+        }
+
+            nav .link a {
+                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            nav .link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 3px;
+                width: 0;
+                border-radius: 100em;
+                background: #000;
+                transition-duration: .4s;
+            }
+
+            nav .link:hover::after {
+                width: 100%;
+            }
+/*logincss*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.account-section {
+    border-bottom: 1px solid #ccc;
+    padding-block: 1em;
+    padding-right: 2em;
+    font-family: poppins;
+}
+.account-section .user  a{
+    color:black;
+}
+
+    .account-section ul  {
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        text-decoration: none;
+    }
+    .account-section a{
+        color:white;
+        text-decoration: none;
+    }
+ul .user, ul .register {
+    margin-right: 2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    ul .user::after, ul .register::after {
+        content: '';
+        height: 100%;
+        width: 1px;
+        background-color: #ccc;
+        position: absolute;
+        right: -1em;
+        top: 0;
+    }
+
+ul .logout, ul .login, ul .register {
+    font-family: poppins;
+    background-color: #266cfb;
+    padding-inline: 1em;
+    padding-block: 5px;
+    border-radius: 100em;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+    ul .logout:hover, ul .login:hover, ul .register:hover {
+        background-color: #333;
+    }
+

@@ -11,70 +11,16 @@
 @*@model List<Items>*@
 @model ElectronicsStore.Models.ItemViewModel
 
-<h2>Create Product</h2>
-@*<form action="/Item/Create" method="post" enctype="multipart/form-data">
-  
-    <div class="form-row">
-       
-
-        <div class="form-group col-md-6">
-            <label for="ImageFile">ImageFile</label>
-            <input type="file" class="form-control" id="ImageFile" name="ImageFile" placeholder="ImageFile" accept="image/*">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="ItemName">ItemName</label>
-            <input type="text" class="form-control" id="ItemName" name="ItemName" placeholder="ItemName">
-        </div>
-        <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="ItemStatus">ItemStatus</label>
-            <input type="text" class="form-control" id="ItemStatus" name="ItemStatus" placeholder="ItemStatus">
-        </div>
-    </div>
-     
-        <div class="form-group col-md-6">
-            <label for="ItemDescription">ItemDescription</label>
-            <input type="text" class="form-control" id="ItemDescription" name="ItemDescription" placeholder="ItemDescription">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="Condition">Condition</label>
-            <input type="text" class="form-control" id="Condition" name="Condition" placeholder="Condition">
-        </div>
-         <div class="form-group col-md-6">
-            <label for="Amount">Amount</label>
-            <input type="number" class="form-control" id="Amount" name="Amount" placeholder="Amount">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="PricePerItem">PricePerItem</label>
-            <input type="number" class="form-control" id="PricePerItem" name="PricePerItem" placeholder="PricePerItem">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="brand">brand</label>
-            <input type="text" class="form-control" id="brand" name="brand" placeholder="brand">
-        </div
-         <div class="form-group col-md-6">
-            <label for="SellerEmail">SellerEmail</label>
-            <input type="text" class="form-control" id="SellerEmail" name="SellerEmail" placeholder="SellerEmail">
-        </div>
-         <div class="form-group col-md-6">
-            <label for="SellerPhonenumber">Seller Phonenumber</label>
-            <input type="text" class="form-control" id="SellerPhonenumber" name="SellerPhonenumber" placeholder="SellerPhonenumber">
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-success">Create</button>
-    
-    
-    <a class="btn btn-danger" href="/Selller/index">Cancel</a>
-</form>*@
+@section searchbar{}
  @section css {
-    <link href="@Url.Content("~/css/CreateItemcss.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/css/CreateItem.css")" rel="stylesheet"/>
 }
-<div class="create-wrapper">
+
+
+
+@*<div class="create-wrapper">
   <p class="title">Create Product</p>
   <form action="/Item/Create" method="post" enctype="multipart/form-data">
-  
-    <!-- <div class="form-row"> -->
 
     <input style="font-family: poppinsl" type="file" name="ImageFile" placeholder="upload image" accept="image/*">
     
@@ -101,8 +47,82 @@
       <button type="submit" class="create-btn">Create</button>
       <button class="cancel-btn"><a href="/Selller/index">Cancel</a></button>
     </div>
-    
-@*    <button class="view-btn"><a href="/Selller/index">view page</a></button>*@
-  </form>
-</div>
+    </form>
 
+</div>*@
+@*    <button class="view-btn"><a href="/Selller/index">view page</a></button>*@
+  
+    <main>
+  
+  <div class="form-wrapper">
+    <div class="title-wrap">
+      <p class="title">Create Product</p>
+    </div>
+
+    <form action="/Item/Create" method="post" enctype="multipart/form-data">
+        <div class="form-group-wrap">
+
+        
+      <div class="form-group one">
+        <div class="input-container">
+          <span>image</span>
+          <input placeholder="upload image" style="font-family: poppinsl" type="file" name="ImageFile" accept="image/*">
+        </div>
+  
+        <div class="input-container">
+          <span> name</span>
+            <input type="text" name="ItemName" placeholder="Item Name">
+        </div>
+  
+        <div class="input-container">
+          <span> status</span>
+          <input type="text" name="ItemStatus" placeholder="ItemStatus">
+        </div>
+  
+        <div class="input-container">
+          <span> description</span>
+          <input type="text" name="ItemDescription" placeholder="ItemDescription">
+        </div>
+  
+        <div class="input-container">
+          <span> condition</span>
+           <input type="text" name="Condition" placeholder="Condition">
+    
+        </div>
+      </div>
+  
+      <div class="form-group two">
+        <div class="input-container">
+          <span> amount</span>
+           <input type="number" name="Amount" placeholder="Amount">
+        </div>
+  
+        <div class="input-container">
+          <span> unit price</span>
+          <input type="number" name="PricePerItem" placeholder="PricePerItem">
+        </div>
+  
+        <div class="input-container">
+          <span> brand name</span>
+        <input type="text" name="brand" placeholder="brand">
+        </div>
+  
+        <div class="input-container">
+          <span> email</span>
+        <input type="email" name="SellerEmail" placeholder="SellerEmail">
+        </div>
+  
+        <div class="input-container">
+          <span> number</span>
+           <input type="number" name="SellerPhonenumber" placeholder="SellerPhonenumber">
+        </div>
+      </div>
+        </div>
+      <div class="edit-btns">
+        <button type="submit"  class="create-btn">Create</button>
+        <button class="cancel-btn"><a href="/Item/Index">Cancel</a></button>
+      </div>
+
+    </form>
+  </div>
+</main>

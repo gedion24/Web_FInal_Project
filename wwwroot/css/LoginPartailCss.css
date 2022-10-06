@@ -1,0 +1,51 @@
+﻿* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.account-section {
+    border-bottom: 1px solid #ccc;
+    padding-block: 1em;
+    padding-right: 2em;
+    font-family: poppins;
+}
+
+    .account-section ul {
+        list-style: none;
+        display: flex;
+        justify-content: end;
+    }
+
+ul .user, ul .register {
+    margin-right: 2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    ul .user::after, ul .register::after {
+        content: '';
+        height: 100%;
+        width: 1px;
+        background-color: #ccc;
+        position: absolute;
+        right: -1em;
+        top: 0;
+    }
+
+ul .logout, ul .login, ul .register {
+    font-family: poppins;
+    background-color: #266cfb;
+    padding-inline: 1em;
+    padding-block: 5px;
+    border-radius: 100em;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+    ul .logout:hover, ul .login:hover, ul .register:hover {
+        background-color: #333;
+    }

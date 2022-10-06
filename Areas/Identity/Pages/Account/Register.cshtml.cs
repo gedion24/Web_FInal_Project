@@ -77,10 +77,10 @@ namespace ElectronicsStore.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Key]
-            // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-            public Guid SellerId { get; set; }
-            [ForeignKey("Item")]
+            //[Key]
+            //// [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+            //public Guid SellerId { get; set; }
+            //[ForeignKey("Item")]
             // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
             //[PersonalData]
             public Guid ItemId { get; set; }
@@ -90,7 +90,7 @@ namespace ElectronicsStore.Areas.Identity.Pages.Account
             public string SellerFname { get; set; }
 
             [Required]
-            [StringLength(100, ErrorMessage = "must Enter User Last name")]
+            [StringLength(255, ErrorMessage = "must Enter User Last name")]
            
             [Display(Name = "SellerLname")]
             public string SellerLname { get; set; }

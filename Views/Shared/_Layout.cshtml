@@ -14,11 +14,75 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ElectronicsStore.styles.css" asp-append-version="true" />
-   @* <link rel="stylesheet" href="~/css/HomeCss.css" asp-append-version="true" />*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
 </head>
 <body>
+      @if (IsSectionDefined("header"))
+    {
+        @RenderSection("header",false)
+    }
+       else
+    {
+           <partial name="_LoginPartial"/>
+
+<div class="search-bar-wrapper">
+
+    <a class="nav-brand" asp-area="" asp-controller="Home" asp-action="Index"><p>Razor Store</p></a>
+ @*    <form asp-action="Index" method="get">
+  <div class="search-bar">
+             
+      <input value="@ViewData["CurrentSearch"]" placeholder="Enter Your Search Key..."/><button type="submit">Search</button>
    
-    <header>
+  </div>
+     </form>*@
+            @if (IsSectionDefined("searchbar"))
+            {
+                @RenderSection("searchbar",false)
+            }
+            else
+            {
+                    <form asp-action="Index" method="get">
+     <div class="form-group">
+         
+         <input type="text"  name="Search" value="@ViewData["CurrentSearch"]" />
+         <input type="submit"  value="Search" class="btn btn-primary" />
+      </div>
+ </form>
+  
+            }
+        
+</div>
+    
+<nav>
+  <ul>
+    <li class="link">
+      <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="link">
+      <a asp-area="" asp-controller="Home" asp-action="Index">Contact Us</a>
+    </li>
+    <li class="link">
+      <a asp-area="" asp-controller="Home" asp-action="Index">Privacy</a>
+    </li>
+    
+ @if (SignInManager.IsSignedIn(User))
+  { 
+    <li class="link">
+      <a asp-area="" asp-controller="Item" asp-action="Index">Manage Items</a>
+    </li>
+    <li class="link">
+      <a asp-area="" asp-controller="Item" asp-action="Create">Create Item</a>
+    </li>
+   } 
+  </ul>
+</nav>
+    }
+ 
+   
+@*    <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ElectronicsStore</a>
@@ -52,7 +116,7 @@
                 <partial name="_LoginPartial"/>
             </div>
         </nav>
-    </header>
+    </header>*@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -60,6 +124,7 @@
              {
               RenderSection("css");
              }
+
             
         </main>
     </div>
@@ -69,6 +134,10 @@
             &copy; 2022 - ElectronicsStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>*@
+  
+ 
+
+
     @if (IsSectionDefined("Footer"))
     {
         @RenderSection("Footer",false)

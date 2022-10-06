@@ -1,24 +1,5 @@
 ﻿
-@font-face {
-    font-family: poppins;
-    src: url('./Poppins/Poppins-Medium.ttf');
-}
 
-@font-face {
-    font-family: poppinsl;
-    src: url('./Poppins/Poppins-Light.ttf');
-}
-
-@font-face {
-    font-family: poppinsb;
-    src: url('./Poppins/Poppins-Bold.ttf');
-}
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-    text-transform: capitalize;
-}
 
 main {
     min-height: 100vh;
@@ -27,6 +8,7 @@ main {
     align-items: center;
     justify-content: center;
     font-family: poppinsl;
+    flex-direction: column;
 }
 
 .form-wrapper {
@@ -34,12 +16,13 @@ main {
     height: 40em;
     width: 75em;
     box-shadow: #64646f33 0px 7px 29px 0px;
+    margin-top: 5em;
 }
 
 .welcome-wrapper {
     width: 60%;
     border: 1px solid #eee;
-    background: #266cfb url('./undraw_visionary_technology_re_jfp7.svg') center 30%/50% no-repeat;
+    background: #266cfb url('Image/undraw_sign_in_re_o58h.svg') center 30%/50% no-repeat;
     color: white;
     display: flex;
     padding: 4em;
@@ -132,7 +115,9 @@ form {
 }
 
 .checkbox {
-    font-family: poppinsl !important;
+    font-family: poppins !important;
+    font-weight: 500;
+    
 }
 
 .sign-in-btn {
@@ -142,6 +127,7 @@ form {
     border: none;
     border-radius: 3px;
     font-family: poppins;
+    font-weight: 500;
     font-size: 1.2em;
     margin-block: 2em;
     cursor: pointer;
@@ -152,3 +138,32 @@ form {
     .sign-in-btn:hover {
         background-color: #333;
     }
+
+.external-login {
+    width: 75em;
+    margin-block: 4em;
+    box-shadow: #64646f33 0px 7px 29px 0px;
+    background-color: #f5f3f3;
+    border: 1px solid rgba(204, 204, 204, 0.162);
+    padding: 2em 4em;
+    font-family: poppins;
+    font-weight:300;
+}
+
+    .external-login .title {
+        font-family: poppins;
+        font-weight:700;
+        font-size: 1.7em;
+        color: #266cfb;
+        margin-bottom: 1em;
+
+    }
+
+    .external-login a {
+        text-decoration: none;
+        color: #266cfb;
+    }
+
+        .external-login a:hover {
+            text-decoration: underline;
+        }

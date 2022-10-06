@@ -7,70 +7,14 @@
 @{
     ViewData["Title"] = "Index";
 }
+@section searchbar{}
     @section css {
     <link href="@Url.Content("~/css/ManageItemcss.css")" rel="stylesheet"/>
 }
 @model List<ElectronicsStore.Models.Items>
 
 
-    
-
-  @*  <table>
-        <thead>
-            <tr>
-                
-                <th>Item id</th>
-               <th>Item Image</th>
-                <th>Item Name</th>
-                <th>ItemStatus</th>
-                <th>ItemDescription</th>
-                <th>Condition</th>
-                <th>Amount</th>
-                <th>Price per Item</th>
-                <th>brand</th>
-                <th>Seller Email</th>
-                <th>Seller Phonenumber</th>
-             
-                
-                
-
-            </tr>
-        </thead>
-        <tbody>
-        @foreach(var items in Model)
-        {
-            
-                <td>@items.ItemId</td>
-                <td> <img src="~/Images/@items.ItemImage"/></td>
-                <td>@items.ItemName</td>
-                <td>@items.ItemStatus</td>
-                <td>@items.ItemDescription</td>
-                <td>@items.Condition</td>
-                <td>@items.Amount</td>
-                <td>@items.PricePerItem</td>
-                <td>@items.brand</td>
-                <td>@items.SellerEmail</td>
-                <td>@items.SellerPhonenumber</td>
-
-                
-
-             
-            
-            <td>
-                <a href="/Item/Update/@items.ItemId" class=" btn btn-outline-primary">Update Item</a>
-            </td>
-            <td>
-                <form asp-action="Delete" asp-route-id="@items.ItemId">
-                    <button type="submit" class="btn btn-warning">Delete</button>
-
-                </form>
-
-            </td>
-             
-        }
-        </tbody>
-        
-    </table>*@
+   
 
     <main>
     <table>
