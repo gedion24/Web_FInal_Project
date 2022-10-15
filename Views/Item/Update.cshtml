@@ -15,40 +15,6 @@
 
 
 
-@*<main>
-    <div class="update-wrapper">
-      <p class="title">Update Product</p>
-      <form action="/Item/Update" method="post" enctype="multipart/form-data">
-        <input type="text" name="ItemId" placeholder="Item ID" asp-for="ItemId"  readonly>
-
-        <input style="font-family: poppinsl" type="file" name="ImageFile" placeholder="upload image" accept="image/*" asp-for="ItemImage">
-        
-        <input type="text" name="ItemName" placeholder="item name" asp-for="ItemName">
-        
-        <input type="text" name="ItemStatus" placeholder="Item Status" asp-for="ItemStatus">
-        
-        <input type="text" name="ItemDescription" placeholder="Item Description" asp-for="ItemDescription">
-        
-        <input type="text" name="Condition" placeholder="Condition" asp-for="Condition">
-        
-        <input type="number" name="Amount" placeholder="Amount" asp-for="Amount">
-        
-        <input type="text" name="PricePerItem" placeholder="unit price" asp-for="PricePerItem">
-        
-        <input type="text" name="brand" placeholder="brand" asp-for="brand">
-        
-        <input type="email" name="SellerEmail" placeholder="Seller Email" asp-for="SellerEmail">
-        
-        <input type="number" name="SellerPhonenumber" placeholder="Seller Phone number" asp-for="SellerPhonenumber">
-      
-
-      <div class="edit-btns">
-        <button type="submit" class="update-btn">update</button>
-        <button class="cancel-btn"><a href="/product/index">Cancel</a></button>
-      </div>
-      </form>
-    </div>
-  </main>*@
 
         <main>
   <div class="form-wrapper">

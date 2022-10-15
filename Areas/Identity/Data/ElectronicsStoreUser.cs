@@ -18,7 +18,6 @@ public class ElectronicsStoreUser : IdentityUser
     [Required]
     public string SellerLname { get; set; }
     
-   // public string SellerImage { get; set; }
     [Required]
     public DateTime SDOB { get; set; }
     [Required]

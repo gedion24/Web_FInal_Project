@@ -61,8 +61,7 @@ namespace ElectronicsStore.Controllers
         {
 
 
-            //string UninqeFileName = UploadedFile(itemView);
-            //itemView.ImageUrl = UninqeFileName;
+         
 
             var user = await _userManager.GetUserAsync(User);
             string wwwRootPath = webHostEnvironment.WebRootPath;
@@ -83,9 +82,8 @@ namespace ElectronicsStore.Controllers
             var item = new Items()
             {
 
-                //  ItemId = long.newLong(),
+              
                 ItemId = Guid.NewGuid(),
-              //  SellerId = Guid.NewGuid(),
                 Id = user.Id,
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pgElPg3fDG+vT2ofyg/fGAWsdHgmVBnSmmMqiJVsVYw=",
+  "Hash": "qeAOPZL8+eY1YBbsGqpCVgH7GnXFMV7Rn4Wb03LBkXc=",
   "Source": "ElectronicsStore",
   "BasePath": "_content/ElectronicsStore",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\css\\HomeCss.css"
     },
     {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\css\\Image\\roberto-nickson-Gvm2wM3V5PA-unsplash.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "css/Image/roberto-nickson-Gvm2wM3V5PA-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Image\\roberto-nickson-Gvm2wM3V5PA-unsplash.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\css\\Image\\StyleSheet.css",
       "SourceId": "ElectronicsStore",
       "SourceType": "Discovered",
@@ -2140,6 +2157,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\pic220238167.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic22031615.jpg",
+      "SourceId": "ElectronicsStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\",
+      "BasePath": "_content/ElectronicsStore",
+      "RelativePath": "Images/pic22031615.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\pic22031615.jpg"
     },
     {
       "Identity": "C:\\Users\\Gedi G\\Desktop\\4th year\\3rd term\\web 2\\Web_FInal_Project\\wwwroot\\Images\\pic220317307.jpg",
